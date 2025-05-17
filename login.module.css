@@ -1,0 +1,218 @@
+:root {
+  --text: #110e0e;
+  --background: #f8f6f6;
+  --primary: #927877;
+  --secondary: #b9c2b3;
+  --accent: #96ab99;
+  --error: #dc3545;
+  --success: #28a745;
+  --radius-md: 10px;
+  --radius-sm: 5px;
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+  --transition-normal: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+}
+
+/* Wrapper */
+.wrapper {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  background: white;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Form Box */
+.formBox {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formBox h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: var(--transition-normal);
+}
+
+.inputBox input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(146, 120, 119, 0.5);
+}
+
+.inputBox label {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.inputBox i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Links */
+.signupLink,
+.loginLink {
+  font-size: 0.9rem;
+  color: var(--text);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signupLink a,
+.loginLink a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signupLink a:hover,
+.loginLink a:hover {
+  text-decoration: underline;
+  color: var(--background);
+}
+
+
+/* Info Text */
+.infoText {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--secondary);
+  color: white;
+}
+
+.infoText h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.infoText p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Background Animation */
+.bgAnimate,
+.bgAnimate2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .formBox,
+  .infoText {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .infoText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .formBox h2,
+  .infoText h2 {
+    font-size: 1.5rem;
+  }
+
+  .infoText p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

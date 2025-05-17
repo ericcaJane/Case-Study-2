@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc; /* Softer background color */
+    color: #333;
+  }
+  
+  /* Container for QR Details */
+  .qr-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #eaf2f8; /* Light pastel blue background */
+  }
+  
+  /* Card Design */
+  .qr-details-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+    text-transform: capitalize;
+  }
+  
+  /* Title Styling */
+  .qr-details-card h1 {
+    font-size: 26px;
+    color: #0056b3; /* Darker blue for the title */
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Paragraph Styling */
+  .qr-details-card p {
+    font-size: 18px;
+    margin: 12px 0;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .qr-details-card p strong {
+    color: #222;
+    font-weight: 600;
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: #d9534f; /* Bootstrap red */
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* Loading Message Styling */
+  .loading-message {
+    color: #007bff; /* Bootstrap blue */
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* Add a subtle fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .qr-details-card {
+      padding: 20px;
+      width: 95%;
+    }
+  
+    .qr-details-card h1 {
+      font-size: 22px;
+    }
+  
+    .qr-details-card p {
+      font-size: 16px;
+    }
+  }
